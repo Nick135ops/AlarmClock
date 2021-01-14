@@ -8,7 +8,7 @@ finally:
     os.system('python -3 -m pip install playsound')
     os.system('python -3 -m pip install datetime')
 
-alarm_sounds= ['beat1.wav', 'music.mp3']
+alarm_sounds= ['beat1.wav']
 print('Enter time in (HH:MM) format')
 wake_up_time = input('What time would you like to wake up?\n')
 curr_time = datetime.now().strftime("%H:%M")
@@ -16,7 +16,7 @@ while 1:
     if wake_up_time == curr_time:
         print('Time to wake up!')
         print('It\'s {0}'.format(curr_time))
-        playsound.playsound(random.choice(alarm_sounds))
+        playsound.playsound(alarm_sounds)
         break
     else:
         print('You still have enough time go to sleep again.')
